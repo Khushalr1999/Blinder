@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "253975107514",
+    "project_id": "blinder-520e7",
+    "storage_bucket": "blinder-520e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253975107514:android:4d8a2481c1f737390daf83",
+        "android_client_info": {
+          "package_name": "com.khushalr.blinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253975107514-7cmht0rdguo5sk1u3k788aa4goikhhvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHvEI3ErZhXLCTGI1LvcZ_hC_2Zb3b9SQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253975107514-7cmht0rdguo5sk1u3k788aa4goikhhvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
