@@ -82,11 +82,12 @@ class _ChatScreenState extends State<ChatScreen> {
 
                   return Flexible(
                     child: ListView(
+                      reverse: false,
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                       shrinkWrap: true,
-                      children:
-                          snapshot.data!.docs.map((DocumentSnapshot document) {
+                      children: snapshot.data!.docs.reversed
+                          .map((DocumentSnapshot document) {
                         Map<String, dynamic> data =
                             document.data()! as Map<String, dynamic>;
                         final currentUser = loggedInUser?.email;
@@ -94,7 +95,9 @@ class _ChatScreenState extends State<ChatScreen> {
 
                         return ListTile(
                           title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                            crossAxisAlignment: isME
+                                ? CrossAxisAlignment.end
+                                : CrossAxisAlignment.start,
                             children: [
                               Text(
                                 data['sender'],
@@ -108,9 +111,8 @@ class _ChatScreenState extends State<ChatScreen> {
                                   bottomRight: Radius.circular(30),
                                 ),
                                 elevation: 5,
-                                color: isME
-                                    ? Colors.lightBlueAccent
-                                    : Colors.white,
+                                color:
+                                    isME ? Colors.lightBlueAccent : Colors.grey,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 20),
